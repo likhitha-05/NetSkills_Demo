@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class exceptionCase {
     public static void main(String args[]){
         int a,b;
-    Scanner x = new Scanner(System.in);
+    try (Scanner x = new Scanner(System.in)) {
         int res;
         try{
             System.out .println("Enter a and b: ");
@@ -21,5 +21,6 @@ public class exceptionCase {
             // System.out.println("input mismatch");
             System.out.println(e);
         }
+    }
     }
 }
